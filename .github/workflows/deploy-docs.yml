@@ -30,7 +30,6 @@ jobs:
 
       - name: 安装依赖
         run: npm i
-        working-directory: .
 
       - name: 构建文档
         env:
