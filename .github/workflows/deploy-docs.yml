@@ -30,6 +30,7 @@ jobs:
 
       - name: 安装依赖
         run: npm i
+        working-directory: ./style-showcase
 
       - name: 构建文档
         env:
