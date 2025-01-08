@@ -7,6 +7,7 @@ export default defineUserConfig({
 
   title: 'style-showcase',
   description: 'my UI component library',
+  base: "/style-showcase/",
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
