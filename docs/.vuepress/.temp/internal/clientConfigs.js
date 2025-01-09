@@ -8,6 +8,7 @@ import * as clientConfig6 from 'E:/style-showcase/docs/.vuepress/.temp/prismjs/c
 import * as clientConfig7 from 'E:/style-showcase/docs/.vuepress/.temp/markdown-tab/config.js'
 import * as clientConfig8 from 'E:/style-showcase/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
 import * as clientConfig9 from 'E:/style-showcase/node_modules/@vuepress/theme-default/lib/client/config.js'
+import * as clientConfig10 from 'E:/style-showcase/docs/.vuepress/client.js'
 
 export const clientConfigs = [
   clientConfig0,
@@ -20,4 +21,5 @@ export const clientConfigs = [
   clientConfig7,
   clientConfig8,
   clientConfig9,
+  clientConfig10,
 ].map((m) => m.default).filter(Boolean)

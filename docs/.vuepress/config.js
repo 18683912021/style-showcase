@@ -14,11 +14,11 @@ export default defineUserConfig({
 
     navbar: [
       // { text: '首页', link: '/' },  
-       { text: '指南', link: '/get-started' },
+      //  { text: 'Photo-scroller', link: '/Photo-scroller' },
       ],
       sidebar: [
-        { text: '首页', link: '/' },  
-         { text: '指南', link: '/get-started' },
+        // { text: '首页', link: '/' },  
+         { text: '指南', link: '/Photo-scroller' },
         ],
   }),
 
