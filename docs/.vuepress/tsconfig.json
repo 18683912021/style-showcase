@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "strict": true,
+        "jsx": "preserve", // 关键！启用 JSX 支持
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "types": [
+            "node"
+        ], // 引入 Node.js 类型声明
+        "baseUrl": ".", // 可选：路径别名配置
+        "paths": {
+            "@/*": [
+                "./docs/.vuepress/*"
+            ]
+        }
+    },
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.vue", // 包含 Vue 文件类型检查
+        "docs/.vuepress/**/*" // 确保 VuePress 目录被扫描
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
