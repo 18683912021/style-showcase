@@ -14,12 +14,12 @@ export default defineUserConfig({
 
     navbar: [
       // { text: '首页', link: '/' },  
-      //  { text: 'Photo-scroller', link: '/Photo-scroller' },
-      ],
-      sidebar: [
-        // { text: '首页', link: '/' },  
-         { text: '指南', link: '/Photo-scroller' },
-        ],
+      { text: 'Photo-scroller', link: '/Photo-scroller' },
+    ],
+    sidebar: [
+      // { text: '首页', link: '/' },  
+      { text: '滚动相册', link: '/Photo-scroller' },
+    ],
   }),
 
   bundler: viteBundler(),

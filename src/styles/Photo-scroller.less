@@ -4,9 +4,9 @@
     justify-content: center;
     align-items: center;
     background-color: #fffaff;
-    main {
+    .main {
       display: grid;
-      grid-template-columns: repeat(3, 500px);
+      grid-template-columns: repeat(3, 33.33%);
       overflow-y: hidden;
       padding: 50px;
       .section {
@@ -31,8 +31,8 @@
         }
       }
   
-      section:nth-child(1),
-      section:nth-child(3) {
+      .section:nth-child(1),
+      .section:nth-child(3) {
         animation: scroller linear;
         animation-timeline: scroll(root);
         flex-direction: column-reverse;

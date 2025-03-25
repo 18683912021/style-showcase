@@ -1,6 +1,6 @@
 <template>
   <div class="photo-scroller">
-    <main>
+    <div class="main">
       <div class="section">
         <img
           v-for="(item, index) in leftImage"
@@ -25,7 +25,7 @@
           alt=""
         />
       </div>
-    </main>
+    </div>
   </div>
 </template>
 

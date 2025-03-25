@@ -1,4 +1,4 @@
-import comp from "E:/style-showcase/docs/.vuepress/.temp/pages/404.html.vue"
+import comp from "F:/practice/style-showcase/docs/.vuepress/.temp/pages/404.html.vue"
 const data = JSON.parse("{\"path\":\"/404.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{\"layout\":\"NotFound\"},\"headers\":[],\"git\":{},\"filePathRelative\":null}")
 export { comp, data }
 
