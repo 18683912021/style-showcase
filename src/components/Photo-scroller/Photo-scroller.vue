@@ -30,7 +30,7 @@
 </template>
 
 <style lang="less">
-@import "../../styles/Photo-scroller.less";
+@import "../../styles/Photo-scroller.scss";
 </style>
 
 <script setup>

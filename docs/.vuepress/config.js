@@ -3,18 +3,18 @@ import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
-  lang: 'en-US',
+  lang: 'zh-CN',
 
   title: 'style-showcase',
   description: 'my UI component library',
   base: "/style-showcase/",
 
   theme: defaultTheme({
-    logo: 'https://vuejs.press/images/hero.png',
+    logo: '/images/logo.jpg',
 
     navbar: [
       // { text: '首页', link: '/' },  
-      { text: 'Photo-scroller', link: '/Photo-scroller' },
+      { text: '文档', link: '/Photo-scroller' },
     ],
     sidebar: [
       // { text: '首页', link: '/' },  

@@ -1,6 +1,10 @@
 # 忽略 node_modules 文件夹
 node_modules/
 
+# 忽略 VuePress 生成的缓存文件
+docs/.vuepress/.cache/
+docs/.vuepress/.temp/
+
 # 忽略构建输出
 docs/.vuepress/dist/
 
