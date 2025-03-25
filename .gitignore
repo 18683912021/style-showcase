@@ -23,6 +23,3 @@ temp/
 .env
 .env.local
 
-.package-lock
-
-
