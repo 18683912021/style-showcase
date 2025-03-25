@@ -10,8 +10,6 @@ export default defineUserConfig({
   base: "/style-showcase/",
   theme: defaultTheme({
     logo: '/images/logo.jpg',
-    colorMode: 'dark', // 默认使用深色模式
-    colorModeSwitch: true, // 允许切换模式
     navbar: [
       // { text: '首页', link: '/' },  
       { text: '文档', link: '/Photo-scroller' },
@@ -21,6 +19,28 @@ export default defineUserConfig({
       { text: '滚动相册', link: '/Photo-scroller' },
     ],
   }),
+  themeConfig: {
+    yuu: {
+      // 禁用用户切换浅色主题（强制深色）
+      disableDarkTheme: true, // 确保深色模式可用
+      disableThemeIgnore: true, // 禁止用户忽略强制主题
+      defaultDarkTheme: true,    // 默认启用深色（部分主题版本支持）
+      hideThemeButton: true,
+      // 若主题不支持直接配置，可强制所有页面使用深色
+      colorThemes: ['dark']     // 仅保留深色主题
+    }
+  },
+
+  extendsBundlerOptions: (config) => {
+    config.module?.rule('tsx')
+      .test(/\.tsx?$/)
+      .use('babel-loader')
+      .loader('babel-loader')
+      .options({
+        plugins: ['@vue/babel-plugin-jsx'],
+      })
+  },
 
   bundler: viteBundler(),
+  head: [['meta', { name: 'color-scheme', content: 'dark' }]],
 })

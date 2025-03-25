@@ -4,7 +4,8 @@
         "module": "ESNext",
         "moduleResolution": "Node",
         "strict": true,
-        "jsx": "preserve", // 关键！启用 JSX 支持
+        "jsx": "preserve", // 启用 JSX 支持
+        "jsxImportSource": "vue",
         "esModuleInterop": true,
         "skipLibCheck": true,
         "resolveJsonModule": true,
@@ -13,8 +14,8 @@
             "DOM"
         ],
         "types": [
-            "node"
-        ], // 引入 Node.js 类型声明
+            "node" // 引入 Node.js 类型声明
+        ],
         "baseUrl": ".", // 可选：路径别名配置
         "paths": {
             "@/*": [

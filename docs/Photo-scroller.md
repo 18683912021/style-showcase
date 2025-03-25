@@ -14,4 +14,4 @@ Every markdown file [will be rendered to HTML, then converted to a Vue SFC][cont
 
 VuePress support basic markdown syntax and [some extensions][synatex-extensions], you can also [use Vue features][vue-feature] in it. -->
 
-<PhotoScroller />
+<photo-scroller />

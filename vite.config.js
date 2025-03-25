@@ -1,8 +1,16 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), vueJsx({
+    include: [/\.jsx$/, /\.tsx$/, /\.js$/, /\.vue$/],
+  })],
+  esbuild: {
+    jsxFactory: 'h',
+    jsxFragment: 'Fragment',
+    jsxInject: `import { h } from 'vue';`,
+  },
   build: {
     cssCodeSplit: false, // 启用 CSS 分离
     lib: {
@@ -16,7 +24,7 @@ export default defineConfig({
       output: {
         globals: {
           vue: 'Vue', // 对应外部依赖 Vue 的全局变量名
-          assetFileNames: '[name].[hash].js',   
+          assetFileNames: '[name].[hash].js',
         },
       },
     },

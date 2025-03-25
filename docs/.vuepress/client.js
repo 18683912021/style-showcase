@@ -1,5 +1,5 @@
 import { defineClientConfig } from '@vuepress/client';
-import PhotoScroller from '../../src/components/Photo-scroller/Photo-scroller.vue';
+import PhotoScroller from '../../src/components/Photo-scroller/index.tsx';
 
 export default defineClientConfig({
   enhance({ app }) {
