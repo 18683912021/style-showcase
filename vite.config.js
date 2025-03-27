@@ -14,7 +14,7 @@ export default defineConfig({
     lib: {
       entry: './src/index.ts', // 指向组件库的入口文件
       name: 'StyleShowcase', // 组件库的全局变量名，用于 UMD 构建
-      fileName: (format) => `index.js`, // 输出的文件名
+      fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
       // 确保外部化处理 Vue，不将其打包进组件库
