@@ -1,12 +1,13 @@
 {
   "name": "style-showcase",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "main": "dist/my-component-library.umd.js",
   "module": "dist/my-component-library.es.js",
-  "description": "A VuePress project",
+  "description": "A VuePress component library",
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "build": "vite build && npm run type:gen",
     "docs:build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs",
