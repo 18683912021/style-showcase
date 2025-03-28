@@ -1,5 +1,5 @@
 import { PropType } from "vue";
-import "./styles/Photo-scroller.scss";
+import "./styles/index.scss";
 interface ImageItem {
     src: string;
 }

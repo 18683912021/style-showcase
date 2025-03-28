@@ -1,5 +1,5 @@
 import { defineComponent, PropType } from "vue";
-import "./styles/Photo-scroller.scss";
+import "./styles/index.scss";
 
 import image1 from "../../assets/1.jpeg";
 import image2 from "../../assets/2.jpeg";

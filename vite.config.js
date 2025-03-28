@@ -2,38 +2,52 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import dts from "vite-plugin-dts";
+import path from 'path';
 
 export default defineConfig({
-  plugins: [vue(), vueJsx(),dts()],
+  plugins: [
+    vue({
+      template: {
+        transformAssetUrls: { // 修复Vue文件中的资源路径
+          includeAbsolute: false
+        }
+      }
+    }),
+    vueJsx(),
+    dts({
+      outputDir: 'dist/types', // 明确类型文件输出路径
+      insertTypesEntry: true
+    })
+  ],
   esbuild: {
     jsxFactory: 'h',
     jsxFragment: 'Fragment',
     jsxInject: `import { h } from 'vue';`,
   },
   build: {
-    cssCodeSplit: false, // 启用 CSS 分离
+    cssCodeSplit: true, // 启用CSS分离
     lib: {
-      entry: 'src/index.ts', // 指向组件库的入口文件
-      name: 'StyleShowcase', // 组件库的全局变量名，用于 UMD 构建
+      entry: path.resolve(__dirname, 'src/index.ts'), // 主入口文件
+      name: 'StyleShowcase',
       fileName: (format) => `index.${format}.js`,
       formats: ["es", "cjs"]
     },
     rollupOptions: {
-      // 确保外部化处理 Vue，不将其打包进组件库
       external: ['vue'],
       output: {
         globals: {
-          vue: 'Vue', // 对应外部依赖 Vue 的全局变量名
-          assetFileNames: '[name].[hash].js',
+          vue: 'Vue'
         },
-      },
+        assetFileNames: 'styles/[name][extname]'
+      }
     },
+    minify: 'terser', // 启用代码压缩
+    sourcemap: true, // 生成sourcemap
+    outDir: 'dist'
   },
-  css: {
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true, // 确保 Less 文件能正确解析
-      },
-    },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
   },
 });
