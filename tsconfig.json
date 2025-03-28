@@ -1,8 +1,10 @@
 {
     "compilerOptions": {
+        "outDir": "dist",
         "target": "ESNext",
         "module": "ESNext",
         "moduleResolution": "Node",
+        "declaration": true,
         "strict": true,
         "jsx": "preserve", // 启用 JSX 支持
         "jsxImportSource": "vue",
